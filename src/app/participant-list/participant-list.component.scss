@@ -1,0 +1,25 @@
+.panel-title{
+	background-image: linear-gradient(to bottom,#007cbe 0,#0069a2 100%);
+	text-align: center;
+    padding: 10px;
+	border-radius: 2px;
+	color: white !important;
+}
+
+.person-item-modal {
+	padding: 5px 10px;
+	margin: 1px 0;
+	margin-left: 2px;
+	border: 1px solid #444;
+	border-radius: 5px;
+	border-color: moccasin;
+	background-image: linear-gradient(to bottom,#fcf8e3 0,#faf2cc 100%);
+	font-size: 1.1em;
+	font-weight: normal;
+	text-align: left;
+	cursor: move;
+}
+
+.mat-card {
+    background-image: linear-gradient(to bottom,#fcf8e3 0,#faf2cc 100%) !important;
+}

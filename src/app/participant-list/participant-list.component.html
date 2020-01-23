@@ -1,0 +1,15 @@
+<h3 class="panel-title">Participants List</h3>
+<div ng-model="peopleList"
+    cdkDropList
+    #peopleList="cdkDropList"
+    [cdkDropListData]="peopleList"
+    (cdkDropListDropped)="onDrop($event)">
+    <mat-card *ngFor="let participant of participants" cdkDrag>
+        <mat-card-header>
+            <mat-card-title>{{participant.Name}}</mat-card-title>
+        </mat-card-header>
+    </mat-card>
+    <!-- <div class="person-item-modal" *ngFor="let participant of participants">
+        {{ participant.Name }}
+    </div> -->
+</div>
