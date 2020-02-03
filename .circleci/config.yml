@@ -8,7 +8,7 @@ jobs:
     working_directory: ~/
     docker:
       # specify the version you desire here
-      - image: circleci/node:10-browsers
+      - image: circleci/node:latest
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -30,11 +30,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
+      # run angular!
       - run: 
-        name: 'Build project'
+        name: 'Build project Angular'
         command: 'npm run build'
-
-        -run : 
-          name: 'Testing project'
-          command: 'npm run test'
