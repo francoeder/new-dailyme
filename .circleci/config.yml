@@ -24,15 +24,19 @@ jobs:
             - v1-dependencies-
 
       - run: 
-        name: 'Build dependences'
-        command: 'npm install'
+        name: 'Dependences'
+        command: npm install
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run angular!
+    
       - run: 
-        name: 'Build project Angular'
-        command: 'npm run build'
+        name: 'Build project'
+        command: npm run build
+
+        -run : 
+          name: 'Testing project'
+          command: npm run test
