@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: 'Install npm npm'
+          name: 'Install npm'
           command: sudo npm install npm@latest -g
       # Download and cache dependencies
       - restore_cache:
@@ -27,6 +27,9 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: 'Install ng Angular'
+          command: sudo npm install angular-cli@latest -g
       - run:
           name: 'Build project'
           command: npm run build
