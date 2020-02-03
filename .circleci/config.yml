@@ -38,5 +38,5 @@ jobs:
         command: 'npm run build'
 
       - run : 
-          name: 'Testing project'
-          command: 'npm run test'
+        name: 'Testing project'
+        command: 'npm run test'
