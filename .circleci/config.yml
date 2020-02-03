@@ -25,7 +25,7 @@ jobs:
 
       - run: 
         name: 'Dependences'
-        command: npm install
+        command: 'npm install'
 
       - save_cache:
           paths:
@@ -35,8 +35,8 @@ jobs:
     
       - run: 
         name: 'Build project'
-        command: npm run build
+        command: 'npm run build'
 
       - run : 
           name: 'Testing project'
-          command: npm run test
+          command: 'npm run test'
