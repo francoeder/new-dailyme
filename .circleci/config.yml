@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: 'Update npm'
-          command: sudo npm install
+          command: sudo sudo npm install -g
       # Download and cache dependencies
       - restore_cache:
           keys:
