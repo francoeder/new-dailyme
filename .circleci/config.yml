@@ -29,7 +29,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: 'Install angularcli'
-          command: sudo npm install -g @angular/cli@latest
+          command: sudo npm install -g @angular/cli > /dev/null
       - run:
           name: 'Build project'
           command: npm run build
