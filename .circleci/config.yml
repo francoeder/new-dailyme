@@ -15,8 +15,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: 'Update npm'
-          command: sudo sudo npm install -g
+          name: 'Install npm npm'
+          command: sudo npm install npm@latest -g
+       - run:
+          name: 'Install ng Angular'
+          command: sudo npm install angular-cli@latest -g
       # Download and cache dependencies
       - restore_cache:
           keys:
