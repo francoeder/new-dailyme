@@ -37,6 +37,6 @@ jobs:
         name: 'Build project'
         command: npm run build
 
-        -run : 
+      - run : 
           name: 'Testing project'
           command: npm run test
