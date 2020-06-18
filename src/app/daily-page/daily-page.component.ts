@@ -23,4 +23,9 @@ export class DailyPageComponent implements OnInit {
     this.dailySetup.openDialog();
   }
 
+  setDaily(dailyConfigured: any) {
+    this.daily = dailyConfigured;
+    console.log(this.daily);
+  }
+
 }

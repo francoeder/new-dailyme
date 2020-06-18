@@ -3,4 +3,4 @@
         <mat-icon>build</mat-icon>
     </button>
 </div>
-<app-daily-setup-dialog #dailySetup></app-daily-setup-dialog>
+<app-daily-setup-dialog #dailySetup (closeDailySetupDialog)="setDaily($event)"></app-daily-setup-dialog>

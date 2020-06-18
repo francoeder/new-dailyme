@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, EventEmitter, Output } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { DailyModel } from 'src/app/shared/models/daily-model';
 
@@ -10,6 +10,9 @@ import { DailyModel } from 'src/app/shared/models/daily-model';
 export class DailySetupDialogComponent {
 
   daily: DailyModel;
+
+  @Output()
+  closeDailySetupDialog: EventEmitter<any> = new EventEmitter();
 
   constructor(public dialog: MatDialog) {
     this.daily = new DailyModel();
@@ -24,9 +27,7 @@ export class DailySetupDialogComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('This daily configuration was set:');
-      console.log(result);
-      // TODO: Emit event with the daily model that was configured.
+      this.closeDailySetupDialog.emit(result);
     });
   }
 
