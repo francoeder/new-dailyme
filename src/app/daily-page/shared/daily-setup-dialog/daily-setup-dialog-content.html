@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Daily Setup</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Minutes Per Participant</mat-label>
+        <input matInput type="number" [(ngModel)]="data.MinutesPerParticipant">
+    </mat-form-field>
+
+    <mat-slide-toggle [(ngModel)]="data.PlaySounds">Play Sounds</mat-slide-toggle>
+
+    <!-- TODO: Insert and List Participants (Should be a component?) -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</div>

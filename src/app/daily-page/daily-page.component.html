@@ -1,1 +1,6 @@
-<p>daily-page works!</p>
+<div class="setup-button-container">
+    <button mat-fab color="primary" (click)="openSetupDialog()">
+        <mat-icon>build</mat-icon>
+    </button>
+</div>
+<app-daily-setup-dialog #dailySetup></app-daily-setup-dialog>
